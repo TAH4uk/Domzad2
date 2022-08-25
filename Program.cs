@@ -15,15 +15,35 @@
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-Console.Write("Введите число: ");
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// while (number < 100)
+// {
+//     Console.Write($"Третья цифра в числе {number} отсутствует. Введите число: ");
+//     number = Convert.ToInt32(Console.ReadLine());
+// }
+
+// string result = number.ToString();
+
+// Console.WriteLine($"Третья цифра числа {number} - {result[2]}");
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+Console.Write("Введите номер дня недели: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-while (number < 100)
+while (number < 1 | number > 7)
 {
-    Console.Write($"Третья цифра в числе {number} отсутствует. Введите число: ");
+    Console.Write($"Дня недели с номером {number} не существует. Введите номер дня недели: ");
     number = Convert.ToInt32(Console.ReadLine());
 }
 
-string result = number.ToString();
-
-Console.WriteLine($"Третья цифра числа {number} - {result[2]}");
+if (number >= 1 & number <= 5)
+{
+    Console.Write($"День недели с номером {number} является будним днем");
+}
+else if (number == 6 | number == 7)
+    {
+       Console.Write($"День недели с номером {number} является выходным днем"); 
+    }
